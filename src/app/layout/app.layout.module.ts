@@ -17,8 +17,6 @@ import { AppFooterComponent } from './app.footer.component';
 import { AppConfigModule } from './config/config.module';
 import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
-import {AppPageLayoutComponent} from "./app.pageLayout.component";
-import {AppMenubarComponent} from "./app.menubar.component";
 import {MenubarModule} from "primeng/menubar";
 
 @NgModule({
@@ -28,9 +26,7 @@ import {MenubarModule} from "primeng/menubar";
         AppFooterComponent,
         AppMenuComponent,
         AppSidebarComponent,
-        AppMenubarComponent,
-        AppLayoutComponent,
-        AppPageLayoutComponent
+        AppLayoutComponent
     ],
     imports: [
         BrowserModule,
@@ -48,8 +44,7 @@ import {MenubarModule} from "primeng/menubar";
         MenubarModule
     ],
     exports: [
-        AppLayoutComponent,
-        AppPageLayoutComponent
+        AppLayoutComponent
     ]
 })
 export class AppLayoutModule { }

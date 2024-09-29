@@ -1,7 +1,6 @@
 import {Input, OnInit} from '@angular/core';
 import { Component } from '@angular/core';
 import { LayoutService } from './service/app.layout.service';
-import {MenuItem} from "primeng/api";
 
 @Component({
     selector: 'app-menu',
@@ -11,12 +10,18 @@ export class AppMenuComponent implements OnInit {
 
     @Input() mode: 'SIDEBAR' | 'MENUBAR';
     model: any[] = [];
-    tieredItems: MenuItem[] = [];
 
     constructor(public layoutService: LayoutService) { }
 
     ngOnInit() {
         this.model = [
+            {
+                label: 'Tareas',
+                items: [
+                    { label: 'Listado de Tareas', icon: 'pi pi-fw pi-list', routerLink: ['/app/tasks'] },
+                    { label: 'Crear Nueva Tarea', icon: 'pi pi-fw pi-plus', routerLink: ['/app/tasks/add'] }
+                ]
+            },
             {
                 label: 'Home',
                 items: [
@@ -161,103 +166,6 @@ export class AppMenuComponent implements OnInit {
                     {
                         label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/primefaces/sakai-ng'], target: '_blank'
                     }
-                ]
-            }
-        ];
-        this.tieredItems = [
-            {
-                label: 'Asesores',
-                icon: 'pi pi-fw pi-users',
-                items: [
-                    {
-                        label: 'Nuevo',
-                        icon: 'pi pi-fw pi-plus',
-                        items: [
-                            {
-                                label: 'Asesor',
-                                icon: 'pi pi-fw pi-user-plus',
-                                routerLink: ['/app/uikit/formlayout']
-                            },
-                            {
-                                label: 'Duplicar',
-                                icon: 'pi pi-fw pi-copy'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'Ver',
-                        icon: 'pi pi-fw pi-list'
-                    }
-                ]
-            },
-            {
-                label: 'Propiedades',
-                icon: 'pi pi-fw pi-home',
-                items: [
-                    {
-                        label: 'Nueva',
-                        icon: 'pi pi-fw pi-plus',
-                        routerLink: ['/app/uikit/formlayout']
-                    },
-                    {
-                        label: 'Ver',
-                        icon: 'pi pi-fw pi-list'
-                    },
-                    {
-                        label: 'Buscar',
-                        icon: 'pi pi-fw pi-search'
-                    }
-                ]
-            },
-            {
-                label: 'Propietarios',
-                icon: 'pi pi-fw pi-key',
-                items: [
-                    {
-                        label: 'Nuevo',
-                        icon: 'pi pi-fw pi-plus',
-                        items: [
-                            {
-                                label: 'Propietario',
-                                icon: 'pi pi-fw pi-user-plus',
-                                routerLink: ['/app/uikit/formlayout']
-                            },
-                            {
-                                label: 'Duplicar',
-                                icon: 'pi pi-fw pi-copy'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'Ver',
-                        icon: 'pi pi-fw pi-list',
-                        routerLink: ['/app/owners']
-                    }
-                ]
-            },
-            {
-                label: 'Clientes',
-                icon: 'pi pi-fw pi-user',
-                items: [
-                    {
-                        label: 'Nuevo',
-                        icon: 'pi pi-fw pi-plus',
-                        items: [
-                            {
-                                label: 'Cliente',
-                                icon: 'pi pi-fw pi-user-plus',
-                                routerLink: ['/app/uikit/formlayout']
-                            },
-                            {
-                                label: 'Duplicar',
-                                icon: 'pi pi-fw pi-copy'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'Ver',
-                        icon: 'pi pi-fw pi-list'
-                    },
                 ]
             }
         ];

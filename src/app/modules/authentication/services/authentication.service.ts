@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {catchError, mergeMap, Observable, throwError} from "rxjs";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {environment} from "../../../../environments/environment";
-import {LoginRequest} from "../../../shared/models/user";
+import {LoginRequest} from "../../../shared/models/task";
 import {map} from "rxjs/operators";
 import {ApiCodeMessage} from "../../../shared/consts/api-code-message.constant";
 

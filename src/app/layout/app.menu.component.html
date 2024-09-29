@@ -9,7 +9,7 @@
 </style>
 
 <!--MENU FOR SIDEBAR-->
-<ul class="layout-menu" *ngIf="mode === 'SIDEBAR'">
+<ul class="layout-menu">
     <ng-container *ngFor="let item of model; let i = index;">
         <li app-menuitem *ngIf="!item.separator" [item]="item" [index]="i" [root]="true"></li>
         <li *ngIf="item.separator" class="menu-separator"></li>
@@ -20,12 +20,3 @@
         </a>
     </li>
 </ul>
-<!--MENU FOR MENUBAR-->
-<p-menubar [model]="tieredItems" *ngIf="mode === 'MENUBAR'">
-    <ng-template pTemplate="start">
-        <span class="p-input-icon-right" style="margin-right: 5px">
-            <input type="text" pInputText placeholder="Search">
-            <i class="pi pi-search"></i>
-        </span>
-    </ng-template>
-</p-menubar>
