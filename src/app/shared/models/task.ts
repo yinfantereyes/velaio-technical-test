@@ -24,14 +24,7 @@ export interface PersonEntity {
     id: number,
     personName: string,
     age: string,
-    skills: Skill[],
-}
-
-/**
- * Habilidad
- */
-export interface Skill {
-    skillName: string
+    skills: string[],
 }
 
 

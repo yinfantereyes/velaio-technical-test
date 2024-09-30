@@ -40,20 +40,6 @@ export class LoginComponent implements OnInit{
     }
 
     login(){
-        // this.ngxLoaderService.start();
-        let loginRequest = this.loginForm.getRawValue();
-        this.authenticationService.login(loginRequest)
-            .subscribe({
-                next: (res) => {
-
-                },
-                error: (err) => {
-                    this.router.navigate([this.routes.DEMO]);
-                    // this.ngxLoaderService.stop();
-                    // this.notificacionService.notificationError(
-                    //     err.status ? 'Lo sentimos, ocurrió un error al crear la operación' : err
-                    // );
-                },
-            });
+        //
     }
 }

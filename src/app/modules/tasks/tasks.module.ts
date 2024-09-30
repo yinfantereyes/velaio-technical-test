@@ -11,6 +11,9 @@ import {ProgressBarModule} from "primeng/progressbar";
 import {SharedModule} from "primeng/api";
 import {SliderModule} from "primeng/slider";
 import {TableModule} from "primeng/table";
+import {ReactiveFormsModule} from "@angular/forms";
+import {CalendarModule} from "primeng/calendar";
+import {RippleModule} from "primeng/ripple";
 
 @NgModule({
     declarations: [
@@ -27,7 +30,10 @@ import {TableModule} from "primeng/table";
         ProgressBarModule,
         SharedModule,
         SliderModule,
-        TableModule
+        TableModule,
+        ReactiveFormsModule,
+        CalendarModule,
+        RippleModule
     ]
 })
 export class TasksModule {
