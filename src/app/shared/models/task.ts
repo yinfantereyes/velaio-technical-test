@@ -13,7 +13,8 @@ export interface TaskEntity {
     id: number,
     taskName: string,
     endDate: Date,
-    person: PersonEntity
+    state: string,
+    associatedPerson: PersonEntity[]
 }
 
 /**
@@ -21,7 +22,7 @@ export interface TaskEntity {
  */
 export interface PersonEntity {
     id: number,
-    personMame: string,
+    personName: string,
     age: string,
     skills: Skill[],
 }
