@@ -1,25 +1,54 @@
 <div class="grid">
 
     <div class="col-12">
-        <div class="surface-card shadow-2 border-round p-4 h-full">
+        <div class="surface-card shadow-1 border-round p-4 h-full">
             <div class="flex align-items-center justify-content-between mb-3">
                 <div class="text-900 font-medium text-xl">Listado de Tareas</div>
-                <!--                    <div>-->
-                <!--                        <button pbutton="" pripple="" icon="pi pi-ellipsis-v"-->
-                <!--                                class="p-element p-ripple p-button-text p-button-plain p-button-rounded p-button p-component p-button-icon-only">-->
-                <!--                            <span class="p-button-icon pi pi-ellipsis-v" aria-hidden="true"></span><span-->
-                <!--                            class="p-ink"></span></button>-->
-                <!--                        <p-menu class="p-element ng-tns-c15-3 ng-star-inserted">&lt;!&ndash;&ndash;&gt;</p-menu>-->
-                <!--                    </div>-->
+                <div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <div class="flex align-items-center">
+                            <p-radioButton name="taskFilter" value="Todas" [(ngModel)]="filterSelected" inputId="all"
+                                           (onClick)="loadTasks()"></p-radioButton>
+                            <label htmlFor="all" class="ml-2">Todas</label>
+                        </div>
+
+                        <div class="flex align-items-center">
+                            <p-radioButton name="taskFilter" value="Completada" [(ngModel)]="filterSelected"
+                                           inputId="complete" (onClick)="loadTasks()"></p-radioButton>
+                            <label htmlFor="complete" class="ml-2">Completadas</label>
+                        </div>
+
+                        <div class="flex align-items-center">
+                            <p-radioButton name="taskFilter" value="Pendiente" [(ngModel)]="filterSelected"
+                                           inputId="pending" (onClick)="loadTasks()"></p-radioButton>
+                            <label htmlFor="pending" class="ml-2">Pendientes</label>
+                        </div>
+
+                    </div>
+                    <!--                        <button pbutton="" pripple="" icon="pi pi-ellipsis-v"-->
+                    <!--                                class="p-element p-ripple p-button-text p-button-plain p-button-rounded p-button p-component p-button-icon-only">-->
+                    <!--                            <span class="p-button-icon pi pi-ellipsis-v" aria-hidden="true"></span><span-->
+                    <!--                            class="p-ink"></span></button>-->
+                    <!--                        <p-menu class="p-element ng-tns-c15-3 ng-star-inserted">&lt;!&ndash;&ndash;&gt;</p-menu>-->
+                </div>
             </div>
             <ul class="list-none p-0 m-0">
                 <li *ngFor="let task of taskList; let i = index"
                     class="py-3 border-bottom-1 surface-border flex md:align-items-start md:justify-content-between flex-column md:flex-row">
                     <div class="flex align-items-start mr-0 lg:mr-5">
-                        <span class="text-900 font-bold block mr-2 w-2rem h-2rem">{{task.id}}.</span>
-                        <div><span class="text-900 font-bold block mb-2">{{task.taskName}}</span>
+                        <span class="text-900 font-bold block mr-2 w-2rem h-2rem">{{i + 1}}.</span>
+                        <div>
+                            <span class="text-900 font-bold block mb-2">{{task.taskName}}
+                                <p-tag class="font-bold ml-2"
+                                       [icon]="task.state == 'Completada' ? 'pi pi-check' : 'pi pi-exclamation-triangle'"
+                                       [severity]="task.state == 'Completada' ? 'success' : 'warning'"
+                                       [pTooltip]="task.state != 'Completada' ? 'Completar tarea' : ''"
+                                       [style.cursor]="task.state != 'Completada' ? 'pointer' : 'not-allowed'"
+                                       [value]="task.state" (click)="completeTask(task)"></p-tag>
+                            </span>
                             <div class="text-700 mb-2">Personas Asociadas:</div>
-                            <div class="px-3 mb-2"  *ngFor="let person of task.associatedPerson; let i = index">
+                            <div class="px-3 mb-2" *ngFor="let person of task.associatedPerson; let i = index">
                                 <div class="text-900">
                                     <span class="font-medium"> - {{person.personName}} ({{person.age}})</span>
                                 </div>
@@ -30,6 +59,16 @@
                         </div>
                     </div>
                     <span class="block text-500 font-medium ml-7 md:ml-5 mt-2 md:mt-0">{{task.endDate | date: 'dd/MM/yyyy'}}</span>
+                    <div class="mt-2 md:mt-0 flex flex-nowrap">
+                        <button pButton pRipple type="button" icon="pi pi-pencil"
+                                class="p-button-warning mr-2"
+                                pTooltip="Editar tarea" tooltipPosition="top"
+                                (click)="editTask(task.id)"></button>
+                        <button pButton pRipple type="button" icon="pi pi-trash"
+                                class="p-button-danger mr-2"
+                                pTooltip="Eliminar tarea" tooltipPosition="top"
+                                (click)="removeTask(task.id)"></button>
+                    </div>
                 </li>
             </ul>
         </div>

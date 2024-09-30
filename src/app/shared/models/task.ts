@@ -10,7 +10,7 @@ export interface LoginRequest {
  * Tarea
  */
 export interface TaskEntity {
-    id: number,
+    id: string,
     taskName: string,
     endDate: Date,
     state: string,

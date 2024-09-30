@@ -1,13 +1,13 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "taskName": "Desarrollar nueva funcionalidad",
       "endDate": "2024-10-01T00:00:00Z",
       "state": "Completada",
       "associatedPerson": [
         {
-          "id": 1,
+          "id": "1",
           "personName": "Juan Pérez",
           "age": "30",
           "skills": [
@@ -16,7 +16,7 @@
           ]
         },
         {
-          "id": 5,
+          "id": "5",
           "personName": "Luis Fernández",
           "age": "29",
           "skills": [
@@ -27,30 +27,28 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "taskName": "Revisar código",
-      "endDate": "2024-10-05T00:00:00Z",
+      "endDate": "2024-10-05T00:00:00.000Z",
       "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": 2,
           "personName": "María García",
           "age": "28",
           "skills": [
-            "TypeScript",
-            "Node.js"
+            "TypeScript2"
           ]
         }
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "taskName": "Diseñar interfaz de usuario",
       "endDate": "2024-10-10T00:00:00Z",
-      "state": "Completada",
+      "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": 2,
+          "id": "2",
           "personName": "María García",
           "age": "28",
           "skills": [
@@ -59,7 +57,7 @@
           ]
         },
         {
-          "id": 3,
+          "id": "3",
           "personName": "Carlos López",
           "age": "35",
           "skills": [
@@ -70,13 +68,13 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "taskName": "Implementar API",
       "endDate": "2024-10-15T00:00:00Z",
       "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": 4,
+          "id": "4",
           "personName": "Ana Martínez",
           "age": "32",
           "skills": [
@@ -87,13 +85,12 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "taskName": "Pruebas de integración",
-      "endDate": "2024-10-20T00:00:00Z",
+      "endDate": "2024-10-20T00:00:00.000Z",
       "state": "Completada",
       "associatedPerson": [
         {
-          "id": 5,
           "personName": "Luis Fernández",
           "age": "29",
           "skills": [
@@ -104,13 +101,13 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "taskName": "Optimizar base de datos",
       "endDate": "2024-10-25T00:00:00Z",
       "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": 6,
+          "id": "6",
           "personName": "Elena Rodríguez",
           "age": "27",
           "skills": [
@@ -119,7 +116,7 @@
           ]
         },
         {
-          "id": 4,
+          "id": "4",
           "personName": "Ana Martínez",
           "age": "32",
           "skills": [
@@ -130,13 +127,13 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "taskName": "Configurar servidor",
       "endDate": "2024-10-30T00:00:00Z",
       "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": 7,
+          "id": "7",
           "personName": "Miguel Sánchez",
           "age": "31",
           "skills": [
@@ -147,13 +144,13 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "taskName": "Crear documentación",
       "endDate": "2024-11-05T00:00:00Z",
       "state": "Completada",
       "associatedPerson": [
         {
-          "id": 8,
+          "id": "8",
           "personName": "Laura Gómez",
           "age": "26",
           "skills": [
@@ -164,13 +161,12 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "taskName": "Realizar pruebas de carga",
-      "endDate": "2024-11-10T00:00:00Z",
-      "state": "Completada",
+      "endDate": "2024-11-10T00:00:00.000Z",
+      "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": 9,
           "personName": "David Ruiz",
           "age": "33",
           "skills": [
@@ -181,13 +177,13 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "taskName": "Desplegar aplicación",
       "endDate": "2024-11-15T00:00:00Z",
       "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": 8,
+          "id": "8",
           "personName": "Laura Gómez",
           "age": "26",
           "skills": [
@@ -196,12 +192,73 @@
           ]
         },
         {
-          "id": 10,
+          "id": "10",
           "personName": "Sofía Torres",
           "age": "34",
           "skills": [
             "Docker",
             "Kubernetes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727719133048",
+      "taskName": "Desarrollar nueva funcionalidad",
+      "endDate": "2024-11-27T05:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante Reyes",
+          "age": 35,
+          "skills": [
+            "JavaScript"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727720667693",
+      "taskName": "Actualizar el TFS",
+      "endDate": "2024-11-26T05:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante Reyes",
+          "age": 34,
+          "skills": [
+            "Html"
+          ]
+        },
+        {
+          "personName": "María Eugenia Rentería Heredia",
+          "age": 34,
+          "skills": [
+            "Html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727721173572",
+      "taskName": "Actualizar el TFS del dia de hoy",
+      "endDate": "2024-10-05T04:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante Reyes1",
+          "age": 341,
+          "skills": [
+            "Html1",
+            "JavaScript2"
+          ]
+        },
+        {
+          "personName": "María Eugenia Rentería Heredia2",
+          "age": 452,
+          "skills": [
+            "Html2",
+            "Vue2"
           ]
         }
       ]

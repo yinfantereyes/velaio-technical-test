@@ -7,6 +7,7 @@ import {TaskListComponent} from "./task-list/task-list.component";
     imports: [RouterModule.forChild([
         { path: '', component: TaskListComponent},
         { path: 'add', component: AddTaskComponent},
+        { path: 'edit/:id', component: AddTaskComponent},
     ])],
     exports: [RouterModule]
 })

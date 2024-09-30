@@ -6,14 +6,14 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import {ButtonModule} from "primeng/button";
 import {DropdownModule} from "primeng/dropdown";
 import {InputTextModule} from "primeng/inputtext";
-import {MultiSelectModule} from "primeng/multiselect";
-import {ProgressBarModule} from "primeng/progressbar";
 import {SharedModule} from "primeng/api";
-import {SliderModule} from "primeng/slider";
-import {TableModule} from "primeng/table";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CalendarModule} from "primeng/calendar";
 import {RippleModule} from "primeng/ripple";
+import {TooltipModule} from "primeng/tooltip";
+import {CheckboxModule} from "primeng/checkbox";
+import {RadioButtonModule} from "primeng/radiobutton";
+import {TagModule} from "primeng/tag";
 
 @NgModule({
     declarations: [
@@ -26,14 +26,14 @@ import {RippleModule} from "primeng/ripple";
         ButtonModule,
         DropdownModule,
         InputTextModule,
-        MultiSelectModule,
-        ProgressBarModule,
         SharedModule,
-        SliderModule,
-        TableModule,
         ReactiveFormsModule,
         CalendarModule,
-        RippleModule
+        RippleModule,
+        TooltipModule,
+        RadioButtonModule,
+        TagModule,
+        FormsModule
     ]
 })
 export class TasksModule {

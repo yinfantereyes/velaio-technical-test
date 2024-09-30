@@ -2,6 +2,9 @@ import {Component, inject, OnInit} from '@angular/core';
 import {TaskService} from "../services/task.service";
 import {TaskEntity} from "../../../shared/models/task";
 import {MessageService} from "primeng/api";
+import {take} from "rxjs";
+import {Router} from "@angular/router";
+import {Routes} from "../../../shared/consts/routes.constant";
 
 @Component({
     selector: 'app-task-list',
@@ -11,11 +14,15 @@ import {MessageService} from "primeng/api";
 export class TaskListComponent implements OnInit {
 
     public taskList: TaskEntity[] = [];
+    public filterSelected: string = 'Todas';
 
+    protected readonly router: Router = inject<Router>(Router);
     protected readonly taskService: TaskService =
         inject<TaskService>(TaskService);
     protected readonly messageService: MessageService =
         inject<MessageService>(MessageService);
+
+    public routes: typeof Routes = Routes;
 
     constructor() {
     }
@@ -25,16 +32,67 @@ export class TaskListComponent implements OnInit {
     }
 
     public loadTasks() {
-        this.taskService.getTasks().subscribe({
-            next: (res) => {
-                this.taskList = res;
-                console.log(this.taskList)
-            },
-            error: (err) => {
-                this.messageService.add({
-                    key: 'principalMessage', severity: 'error', summary: 'Error', detail: err
+        this.taskService.getTasks()
+            .pipe(take(1))
+            .subscribe({
+                next: (res) => {
+                    this.taskList = res;
+                    this.filterTasks();
+                },
+                error: (err) => {
+                    this.messageService.add({
+                        key: 'tst', severity: 'error', summary: 'Error', detail: err.statusText
+                    });
+                },
+            });
+    }
+
+    public filterTasks() {
+        if (this.filterSelected !== 'Todas') {
+            this.taskList = this.taskList.filter(task => task.state === this.filterSelected);
+        }
+    }
+
+    public completeTask(selectedTask: TaskEntity) {
+        console.log(selectedTask)
+        if (selectedTask.state == 'Pendiente') {
+            selectedTask.state = 'Completada';
+            this.taskService.updateTask(selectedTask.id, selectedTask)
+                .pipe(take(1))
+                .subscribe({
+                    next: (res) => {
+                        this.messageService.add({
+                            key: 'tst', severity: 'success', summary: 'Correcto', detail: 'Tarea Actualizada'
+                        });
+                    },
+                    error: (err) => {
+                        this.messageService.add({
+                            key: 'tst', severity: 'error', summary: 'Error', detail: err.statusText
+                        });
+                    },
                 });
-            },
-        });
+        }
+    }
+
+    editTask(taskId: string){
+        this.router.navigate([this.routes.EDIT_TASK, taskId]);
+    }
+
+    removeTask(taskId: string){
+        this.taskService.deleteTask(taskId)
+            .pipe(take(1))
+            .subscribe({
+                next: (res) => {
+                    this.messageService.add({
+                        key: 'tst', severity: 'success', summary: 'Correcto', detail: 'Tarea Eliminada'
+                    });
+                    this.loadTasks();
+                },
+                error: (err) => {
+                    this.messageService.add({
+                        key: 'tst', severity: 'error', summary: 'Error', detail: err.statusText
+                    });
+                },
+            });
     }
 }
