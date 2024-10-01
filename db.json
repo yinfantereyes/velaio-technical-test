@@ -1,6 +1,202 @@
 {
-    "posts": [
-        { "id": 1, "title": "Post 1", "body": "This is the first post" },
-        { "id": 2, "title": "Post 2", "body": "This is the second post" }
-    ]
+  "tasks": [
+    {
+      "id": "4",
+      "taskName": "Implementar API",
+      "endDate": "2024-10-15T00:00:00Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "id": "4",
+          "personName": "Ana Martínez",
+          "age": "32",
+          "skills": [
+            "Python",
+            "Django"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "taskName": "Pruebas de integración",
+      "endDate": "2024-10-20T00:00:00.000Z",
+      "state": "Completada",
+      "associatedPerson": [
+        {
+          "personName": "Luis Fernández",
+          "age": "29",
+          "skills": [
+            "JUnit",
+            "Selenium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "taskName": "Optimizar base de datos",
+      "endDate": "2024-10-25T00:00:00Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "id": "6",
+          "personName": "Elena Rodríguez",
+          "age": "27",
+          "skills": [
+            "SQL",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "id": "4",
+          "personName": "Ana Martínez",
+          "age": "32",
+          "skills": [
+            "Python",
+            "Django"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "taskName": "Configurar servidor",
+      "endDate": "2024-10-30T00:00:00Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "id": "7",
+          "personName": "Miguel Sánchez",
+          "age": "31",
+          "skills": [
+            "Linux",
+            "Nginx"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "taskName": "Crear documentación",
+      "endDate": "2024-11-05T00:00:00Z",
+      "state": "Completada",
+      "associatedPerson": [
+        {
+          "id": "8",
+          "personName": "Laura Gómez",
+          "age": "26",
+          "skills": [
+            "Markdown",
+            "Git"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "taskName": "Realizar pruebas de carga",
+      "endDate": "2024-11-10T00:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "David Ruiz",
+          "age": "33",
+          "skills": [
+            "JMeter",
+            "Gatling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "taskName": "Desplegar aplicación",
+      "endDate": "2024-11-15T00:00:00Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "id": "8",
+          "personName": "Laura Gómez",
+          "age": "26",
+          "skills": [
+            "Markdown",
+            "Git"
+          ]
+        },
+        {
+          "id": "10",
+          "personName": "Sofía Torres",
+          "age": "34",
+          "skills": [
+            "Docker",
+            "Kubernetes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727750608476",
+      "taskName": "Actualizar el TFS",
+      "endDate": "2024-10-02T04:00:00.000Z",
+      "state": "Completada",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante Reyes",
+          "age": 56,
+          "skills": [
+            "Html",
+            "JavaScript"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727755710943",
+      "taskName": "Adicionar nueva funcionalidad",
+      "endDate": "2024-10-17T04:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante",
+          "age": 35,
+          "skills": [
+            "Html",
+            "JavaScript"
+          ]
+        },
+        {
+          "personName": "María Eugenia Rentería Heredia",
+          "age": 54,
+          "skills": [
+            "JavaScript",
+            "Css"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727757908130",
+      "taskName": "Actualizar el TFS del dia de hoy",
+      "endDate": "2024-10-02T04:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante Reyes",
+          "age": 35,
+          "skills": [
+            "Html",
+            "TypeScript"
+          ]
+        },
+        {
+          "personName": "Teresa Martinez Quila",
+          "age": 54,
+          "skills": [
+            "html"
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,4 +1,5 @@
 export enum Routes {
-    DEMO = '/demo/',
-    HOME = '/app/home',
+    TASK_LIST = '/app/tasks',
+    ADD_TASK = '/app/tasks/add',
+    EDIT_TASK = '/app/tasks/edit',
 }

@@ -9,23 +9,19 @@ import { BadgeModule } from 'primeng/badge';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { RippleModule } from 'primeng/ripple';
-import { AppMenuComponent } from './app.menu.component';
-import { AppMenuitemComponent } from './app.menuitem.component';
+import { AppMenuComponent } from '../shared/components/menu/app.menu.component';
+import { AppMenuitemComponent } from '../shared/components/menu/app.menuitem.component';
 import { RouterModule } from '@angular/router';
-import { AppTopBarComponent } from './app.topbar.component';
-import { AppFooterComponent } from './app.footer.component';
+import { AppTopBarComponent } from '../shared/components/top-bar/app.topbar.component';
+import { AppFooterComponent } from '../shared/components/footer/app.footer.component';
 import { AppConfigModule } from './config/config.module';
-import { AppSidebarComponent } from "./app.sidebar.component";
+import { AppSidebarComponent } from "../shared/components/side-bar/app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
 import {MenubarModule} from "primeng/menubar";
+import {ToastModule} from "primeng/toast";
 
 @NgModule({
     declarations: [
-        AppMenuitemComponent,
-        AppTopBarComponent,
-        AppFooterComponent,
-        AppMenuComponent,
-        AppSidebarComponent,
         AppLayoutComponent
     ],
     imports: [
@@ -41,7 +37,14 @@ import {MenubarModule} from "primeng/menubar";
         RippleModule,
         RouterModule,
         AppConfigModule,
-        MenubarModule
+        MenubarModule,
+        ToastModule,
+        //----------------
+        AppTopBarComponent,
+        AppSidebarComponent,
+        AppMenuComponent,
+        AppMenuitemComponent,
+        AppFooterComponent,
     ],
     exports: [
         AppLayoutComponent

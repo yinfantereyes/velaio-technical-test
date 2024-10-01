@@ -1,19 +1,12 @@
 /**
- * Credenciales del Login
- */
-export interface LoginRequest {
-    user: string,
-    password: string;
-}
-
-/**
  * Tarea
  */
 export interface TaskEntity {
-    id: number,
+    id: string,
     taskName: string,
     endDate: Date,
-    person: PersonEntity
+    state: string,
+    associatedPerson: PersonEntity[]
 }
 
 /**
@@ -21,16 +14,9 @@ export interface TaskEntity {
  */
 export interface PersonEntity {
     id: number,
-    personMame: string,
+    personName: string,
     age: string,
-    skills: Skill[],
-}
-
-/**
- * Habilidad
- */
-export interface Skill {
-    skillName: string
+    skills: string[],
 }
 
 
