@@ -1,12 +1,4 @@
 /**
- * Credenciales del Login
- */
-export interface LoginRequest {
-    user: string,
-    password: string;
-}
-
-/**
  * Tarea
  */
 export interface TaskEntity {

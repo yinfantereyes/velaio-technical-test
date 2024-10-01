@@ -1,48 +1,6 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "taskName": "Revisar código",
-      "endDate": "2024-10-05T00:00:00.000Z",
-      "state": "Completada",
-      "associatedPerson": [
-        {
-          "personName": "María García",
-          "age": "28",
-          "skills": [
-            "TypeScript",
-            "JavaScript",
-            "Java"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "taskName": "Diseñar interfaz de usuario",
-      "endDate": "2024-10-10T04:00:00.000Z",
-      "state": "Pendiente",
-      "associatedPerson": [
-        {
-          "personName": "María García",
-          "age": 30,
-          "skills": [
-            "TypeScript",
-            "Node.js"
-          ]
-        },
-        {
-          "personName": "Carlos López",
-          "age": "35",
-          "skills": [
-            "UX Design",
-            "Figma",
-            "Css"
-          ]
-        }
-      ]
-    },
-    {
       "id": "4",
       "taskName": "Implementar API",
       "endDate": "2024-10-15T00:00:00Z",
@@ -189,6 +147,53 @@
           "skills": [
             "Html",
             "JavaScript"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727755710943",
+      "taskName": "Adicionar nueva funcionalidad",
+      "endDate": "2024-10-17T04:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante",
+          "age": 35,
+          "skills": [
+            "Html",
+            "JavaScript"
+          ]
+        },
+        {
+          "personName": "María Eugenia Rentería Heredia",
+          "age": 54,
+          "skills": [
+            "JavaScript",
+            "Css"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1727757908130",
+      "taskName": "Actualizar el TFS del dia de hoy",
+      "endDate": "2024-10-02T04:00:00.000Z",
+      "state": "Pendiente",
+      "associatedPerson": [
+        {
+          "personName": "Yoan Infante Reyes",
+          "age": 35,
+          "skills": [
+            "Html",
+            "TypeScript"
+          ]
+        },
+        {
+          "personName": "Teresa Martinez Quila",
+          "age": 54,
+          "skills": [
+            "html"
           ]
         }
       ]
