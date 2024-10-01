@@ -1,11 +1,19 @@
 import {Input, OnInit} from '@angular/core';
 import { Component } from '@angular/core';
-import { LayoutService } from './service/app.layout.service';
-import {Routes} from "../shared/consts/routes.constant";
+import { LayoutService } from '../../../layout/service/app.layout.service';
+import {Routes} from "../../consts/routes.constant";
+import {AppMenuitemComponent} from "./app.menuitem.component";
+import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
     selector: 'app-menu',
-    templateUrl: './app.menu.component.html'
+    templateUrl: './app.menu.component.html',
+    standalone: true,
+    imports: [
+        AppMenuitemComponent,
+        NgForOf,
+        NgIf
+    ]
 })
 export class AppMenuComponent implements OnInit {
 

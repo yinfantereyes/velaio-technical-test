@@ -10,7 +10,9 @@
           "personName": "María García",
           "age": "28",
           "skills": [
-            "TypeScript2"
+            "TypeScript",
+            "JavaScript",
+            "Java"
           ]
         }
       ]
