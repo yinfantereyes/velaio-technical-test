@@ -1,7 +1,7 @@
 <div class="grid">
 
     <div class="col-12">
-        <div class="surface-card shadow-1 border-round p-4 h-full">
+        <div class="card shadow-1">
             <div class="flex align-items-center justify-content-between mb-3">
                 <div class="text-900 font-medium text-xl">Listado de Tareas</div>
                 <div>
@@ -24,13 +24,7 @@
                                            inputId="pending" (onClick)="loadTasks()"></p-radioButton>
                             <label htmlFor="pending" class="ml-2">Pendientes</label>
                         </div>
-
                     </div>
-                    <!--                        <button pbutton="" pripple="" icon="pi pi-ellipsis-v"-->
-                    <!--                                class="p-element p-ripple p-button-text p-button-plain p-button-rounded p-button p-component p-button-icon-only">-->
-                    <!--                            <span class="p-button-icon pi pi-ellipsis-v" aria-hidden="true"></span><span-->
-                    <!--                            class="p-ink"></span></button>-->
-                    <!--                        <p-menu class="p-element ng-tns-c15-3 ng-star-inserted">&lt;!&ndash;&ndash;&gt;</p-menu>-->
                 </div>
             </div>
             <ul class="list-none p-0 m-0">
@@ -39,7 +33,7 @@
                     <div class="flex align-items-start mr-0 lg:mr-5">
                         <span class="text-900 font-bold block mr-2 w-2rem h-2rem">{{i + 1}}.</span>
                         <div>
-                            <span class="text-900 font-bold block mb-2">{{task.taskName}}
+                            <span class="text-900 font-bold block mb-2">{{task.taskName}} - {{task.endDate | date: 'yyyy/MM/dd'}}
                                 <p-tag class="font-bold ml-2"
                                        [icon]="task.state == 'Completada' ? 'pi pi-check' : 'pi pi-exclamation-triangle'"
                                        [severity]="task.state == 'Completada' ? 'success' : 'warning'"
@@ -58,14 +52,14 @@
                             </div>
                         </div>
                     </div>
-                    <span class="block text-500 font-medium ml-7 md:ml-5 mt-2 md:mt-0">{{task.endDate | date: 'dd/MM/yyyy'}}</span>
+
                     <div class="mt-2 md:mt-0 flex flex-nowrap">
                         <button pButton pRipple type="button" icon="pi pi-pencil"
-                                class="p-button-warning mr-2"
+                                class="p-button-warning mx-2"
                                 pTooltip="Editar tarea" tooltipPosition="top"
                                 (click)="editTask(task.id)"></button>
                         <button pButton pRipple type="button" icon="pi pi-trash"
-                                class="p-button-danger mr-2"
+                                class="p-button-danger mx-2"
                                 pTooltip="Eliminar tarea" tooltipPosition="top"
                                 (click)="removeTask(task.id)"></button>
                     </div>

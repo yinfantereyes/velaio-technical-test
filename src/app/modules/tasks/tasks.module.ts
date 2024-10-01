@@ -11,7 +11,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CalendarModule} from "primeng/calendar";
 import {RippleModule} from "primeng/ripple";
 import {TooltipModule} from "primeng/tooltip";
-import {CheckboxModule} from "primeng/checkbox";
 import {RadioButtonModule} from "primeng/radiobutton";
 import {TagModule} from "primeng/tag";
 
@@ -22,18 +21,18 @@ import {TagModule} from "primeng/tag";
   ],
     imports: [
         CommonModule,
+        ReactiveFormsModule,
         TasksRoutingModule,
         ButtonModule,
         DropdownModule,
         InputTextModule,
-        SharedModule,
-        ReactiveFormsModule,
         CalendarModule,
         RippleModule,
         TooltipModule,
         RadioButtonModule,
         TagModule,
-        FormsModule
+        SharedModule,
+        FormsModule,
     ]
 })
 export class TasksModule {

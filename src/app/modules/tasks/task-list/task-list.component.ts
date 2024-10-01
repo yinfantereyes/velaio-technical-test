@@ -31,6 +31,9 @@ export class TaskListComponent implements OnInit {
         this.loadTasks();
     }
 
+    /**
+     * Metodo para cargar todas las tareas
+     */
     public loadTasks() {
         this.taskService.getTasks()
             .pipe(take(1))
@@ -47,12 +50,19 @@ export class TaskListComponent implements OnInit {
             });
     }
 
+    /**
+     * Metodo para filtrar las tareas
+     */
     public filterTasks() {
         if (this.filterSelected !== 'Todas') {
             this.taskList = this.taskList.filter(task => task.state === this.filterSelected);
         }
     }
 
+    /**
+     * Metodo para marcar una tarea como Completada (cambio de estado)
+     * @param selectedTask
+     */
     public completeTask(selectedTask: TaskEntity) {
         console.log(selectedTask)
         if (selectedTask.state == 'Pendiente') {
@@ -74,10 +84,18 @@ export class TaskListComponent implements OnInit {
         }
     }
 
+    /**
+     * Metodo para redireccionar el componente de creación de la tarea y poder editarla
+     * @param taskId
+     */
     editTask(taskId: string){
         this.router.navigate([this.routes.EDIT_TASK, taskId]);
     }
 
+    /**
+     * Metodo para eliminar una tarea
+     * @param taskId
+     */
     removeTask(taskId: string){
         this.taskService.deleteTask(taskId)
             .pipe(take(1))

@@ -1,36 +1,10 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "taskName": "Desarrollar nueva funcionalidad",
-      "endDate": "2024-10-01T00:00:00Z",
-      "state": "Completada",
-      "associatedPerson": [
-        {
-          "id": "1",
-          "personName": "Juan Pérez",
-          "age": "30",
-          "skills": [
-            "JavaScript",
-            "Angular"
-          ]
-        },
-        {
-          "id": "5",
-          "personName": "Luis Fernández",
-          "age": "29",
-          "skills": [
-            "JUnit",
-            "Selenium"
-          ]
-        }
-      ]
-    },
-    {
       "id": "2",
       "taskName": "Revisar código",
       "endDate": "2024-10-05T00:00:00.000Z",
-      "state": "Pendiente",
+      "state": "Completada",
       "associatedPerson": [
         {
           "personName": "María García",
@@ -44,25 +18,24 @@
     {
       "id": "3",
       "taskName": "Diseñar interfaz de usuario",
-      "endDate": "2024-10-10T00:00:00Z",
+      "endDate": "2024-10-10T04:00:00.000Z",
       "state": "Pendiente",
       "associatedPerson": [
         {
-          "id": "2",
           "personName": "María García",
-          "age": "28",
+          "age": 30,
           "skills": [
             "TypeScript",
             "Node.js"
           ]
         },
         {
-          "id": "3",
           "personName": "Carlos López",
           "age": "35",
           "skills": [
             "UX Design",
-            "Figma"
+            "Figma",
+            "Css"
           ]
         }
       ]
@@ -203,62 +176,17 @@
       ]
     },
     {
-      "id": "1727719133048",
-      "taskName": "Desarrollar nueva funcionalidad",
-      "endDate": "2024-11-27T05:00:00.000Z",
-      "state": "Pendiente",
-      "associatedPerson": [
-        {
-          "personName": "Yoan Infante Reyes",
-          "age": 35,
-          "skills": [
-            "JavaScript"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1727720667693",
+      "id": "1727750608476",
       "taskName": "Actualizar el TFS",
-      "endDate": "2024-11-26T05:00:00.000Z",
-      "state": "Pendiente",
+      "endDate": "2024-10-02T04:00:00.000Z",
+      "state": "Completada",
       "associatedPerson": [
         {
           "personName": "Yoan Infante Reyes",
-          "age": 34,
+          "age": 56,
           "skills": [
-            "Html"
-          ]
-        },
-        {
-          "personName": "María Eugenia Rentería Heredia",
-          "age": 34,
-          "skills": [
-            "Html"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1727721173572",
-      "taskName": "Actualizar el TFS del dia de hoy",
-      "endDate": "2024-10-05T04:00:00.000Z",
-      "state": "Pendiente",
-      "associatedPerson": [
-        {
-          "personName": "Yoan Infante Reyes1",
-          "age": 341,
-          "skills": [
-            "Html1",
-            "JavaScript2"
-          ]
-        },
-        {
-          "personName": "María Eugenia Rentería Heredia2",
-          "age": 452,
-          "skills": [
-            "Html2",
-            "Vue2"
+            "Html",
+            "JavaScript"
           ]
         }
       ]

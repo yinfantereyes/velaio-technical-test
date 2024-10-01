@@ -95,6 +95,9 @@ export class AddTaskComponent implements OnInit {
         skills.removeAt(skillIndex);
     }
 
+    /**
+     * Metodo para obtener la tarea por su id y llenar el formulario
+     */
     public loadTaskData() {
         this.taskService.getTask(this.taskEditId)
             .pipe(take(1))
@@ -185,6 +188,9 @@ export class AddTaskComponent implements OnInit {
         this.router.navigate([this.routes.TASK_LIST]);
     }
 
+    /**
+     * Metodo para generar el Id para las tareas
+     */
     public generateTaskId(): string {
         return new Date().getTime().toString();
     }
